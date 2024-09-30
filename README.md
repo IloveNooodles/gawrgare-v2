@@ -1,2 +1,1 @@
-# gawrgare-v2
-Personal Portofolio
+# Gare personal portfolio
