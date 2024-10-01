@@ -1,26 +1,4 @@
 <script setup lang="ts">
-const routes = [
-  {
-    to: "/about",
-    name: "about"
-  },
-  {
-    to: "/blog",
-    name: "blog"
-  },
-  {
-    to: "/projects",
-    name: "projects"
-  },
-  {
-    to: "/experience",
-    name: "experience"
-  },
-  {
-    to: "/awards",
-    name: "awards"
-  },
-]
 
 </script>
 
@@ -32,24 +10,28 @@ const routes = [
           {{ route.name }}
         </NuxtLink>
       </li>
-      <!-- <li> -->
-      <!--   <NuxtLink to="/projects">projects</NuxtLink> -->
-      <!-- </li> -->
-      <!-- <li> -->
-      <!--   <NuxtLink to="/about">about</NuxtLink> -->
-      <!-- </li> -->
-      <!-- <li> -->
-      <!--   <NuxtLink to="/experience">experience</NuxtLink> -->
-      <!-- </li> -->
-      <!-- <li> -->
-      <!--   <NuxtLink to="/awards">awards</NuxtLink> -->
-      <!-- </li> -->
     </ul>
   </nav>
   <div>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, est nihil! Necessitatibus animi, hic commodi
-    voluptates quasi cupiditate, laudantium cumque tempora totam nesciunt aperiam porro ea delectus repellendus amet
-    doloremque!
+    <details>
+      <strong>
+        Muhammad Garebaldhie ER Rahman
+      </strong>
+    </details>
+    <p>
+      Hello, I'm Gare, a Software Engineer and Cybersecurity enthusiast
+    </p>
+    <p>
+      Currently working in Matchmade as an software engineer intern. Previously was working as an intern in Sayurbox,
+      Garena, makmur.id, and Stealth Startup.
+    </p>
+    <p>
+      I also enjoy doing CTF for fun. My favorite is binary and web exploitation.
+    </p>
+    <p>
+      I love to play games especially pokemon and monster hunter, listening to music, and watching movies. By far, my
+      favorite movies is Interstellar and Steins;Gate
+    </p>
   </div>
 </template>
 
