@@ -1,0 +1,53 @@
+@import "./colors";
+@import "./mixins";
+
+$themes: (
+  dark: (primary: $primary-dark,
+    secondary: $secondary-dark,
+    text: $text-dark,
+    text-secondary: $text-secondary-dark,
+    surface: $surface-dark),
+  light: (primary: $primary-white,
+    secondary: $secondary-white,
+    text: $text-white,
+    text-secondary: $text-secondary-white,
+    surface: $surface-white),
+);
+
+@include themify($themes) {
+  main {
+    background: themed("primary");
+  }
+
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: themed("text");
+  }
+
+  a,
+  svg,
+  p {
+    color: themed("text-secondary");
+  }
+
+  a {
+    &:hover {
+      color: themed("text");
+    }
+  }
+
+
+  svg {
+    color: themed("text");
+  }
+
+  button {
+    background-color: themed("secondary");
+    color: themed("text");
+  }
+}

@@ -1,22 +1,18 @@
 export const routes = [
   {
-    to: "/about",
-    name: "about"
+    to: "#about",
+    name: "about",
   },
   {
-    to: "/blog",
-    name: "blog"
-  },
-  {
-    to: "/projects",
-    name: "projects"
-  },
-  {
-    to: "/experience",
+    to: "#experience",
     name: "experience"
   },
   {
-    to: "/awards",
+    to: "#projects",
+    name: "projects"
+  },
+  {
+    to: "#awards",
     name: "awards"
   },
 ]
