@@ -15,7 +15,10 @@ $themes: (
 );
 
 @include themify($themes) {
-  main {
+
+  header,
+  main,
+  footer {
     background: themed("primary");
   }
 
@@ -29,7 +32,6 @@ $themes: (
     color: themed("text");
   }
 
-  a,
   svg,
   p {
     color: themed("text-secondary");

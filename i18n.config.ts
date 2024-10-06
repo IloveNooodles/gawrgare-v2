@@ -9,5 +9,104 @@ export default defineI18nConfig(() => ({
     en: en,
     id: id,
     ja: ja
-  }
+  },
+  numberFormats: {
+    'en': {
+      currency: {
+        style: 'currency',
+        currency: 'USD',
+        notation: 'standard'
+      },
+      decimal: {
+        style: 'decimal',
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+      },
+      percent: {
+        style: 'percent',
+        useGrouping: false
+      }
+    },
+    'id': {
+      currency: {
+        style: 'currency',
+        currency: 'IDR',
+        notation: 'standard'
+      },
+      decimal: {
+        style: 'decimal',
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+      },
+      percent: {
+        style: 'percent',
+        useGrouping: false
+      }
+    },
+    'ja': {
+      currency: {
+        style: 'currency',
+        currency: 'JPY',
+        useGrouping: true,
+        currencyDisplay: 'symbol'
+      },
+      decimal: {
+        style: 'decimal',
+        minimumSignificantDigits: 3,
+        maximumSignificantDigits: 5
+      },
+      percent: {
+        style: 'percent',
+        useGrouping: false
+      }
+    }
+  },
+  datetimeFormats: {
+    'en': {
+      short: {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric'
+      },
+      long: {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
+        weekday: 'short',
+        hour: 'numeric',
+        minute: 'numeric'
+      }
+    },
+    'id': {
+      short: {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric'
+      },
+      long: {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
+        weekday: 'short',
+        hour: 'numeric',
+        minute: 'numeric'
+      }
+    },
+    'ja': {
+      short: {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric'
+      },
+      long: {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
+        weekday: 'short',
+        hour: 'numeric',
+        minute: 'numeric',
+        hour12: true
+      }
+    }
+  },
 }))

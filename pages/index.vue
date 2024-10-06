@@ -1,26 +1,15 @@
 <script setup lang="ts">
-const { locale, setLocale } = useI18n()
 </script>
 
 <template>
-  <nav>
-    <ul>
-      <li v-for="route in routes" :key="route.name">
-        <NuxtLink :to="route.to">
-          {{ route.name }}
-        </NuxtLink>
-      </li>
-      <li>
-        <Icon name="ri:github-line" />
-      </li>
-    </ul>
-  </nav>
-  <div>
-    <div>
-      <p>{{ $t('welcome') }}</p>
-    </div>
-  </div>
-  <div class="content">
+  <!-- <div> -->
+  <!--   <div> -->
+  <!--     <p>{{ $t('welcome') }}</p> -->
+  <!--     <p>Date: {{ $d(new Date(), 'short') }}</p> -->
+  <!--     <p>Curr: {{ $n(1000, 'currency') }}</p> -->
+  <!--   </div> -->
+  <!-- </div> -->
+  <section class="content">
     <h1 class="title">
       Muhammad Garebaldhie ER Rahman
     </h1>
@@ -41,7 +30,7 @@ const { locale, setLocale } = useI18n()
       I love to play games especially pokemon and monster hunter, listening to music, and watching movies. By far, my
       favorite movies is Interstellar and Steins;Gate <span><a>test</a></span>
     </p>
-  </div>
+  </section>
 </template>
 
 <style lang="css" scoped>

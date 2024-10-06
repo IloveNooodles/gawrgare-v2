@@ -1,6 +1,15 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
+  app: {
+    head: {
+      title: 'mgarebaldhie.me',
+      charset: 'utf-8',
+      viewport: 'width=device-width, initial-scale=1',
+    },
+    // baseURL: "https://mgarebaldhie.me",
+    pageTransition: { name: 'page', mode: 'out-in' },
+  },
   devtools: { enabled: true },
   css: ['~/assets/scss/reset.scss', '~/assets/scss/index.scss', '~/assets/scss/themes.scss'],
   vite: {
@@ -13,17 +22,14 @@ export default defineNuxtConfig({
     }
   },
   i18n: {
+    baseUrl: "https://mgarebaldhie.me",
     locales: [
-      { code: 'en', iso: 'en-US' },
-      { code: 'ja', iso: 'ja-JP' },
-      { code: 'id', iso: 'id-ID' }
+      { code: 'en', language: 'en-US' },
+      { code: 'ja', language: 'ja-JP' },
+      { code: 'id', language: 'id-ID' }
     ],
     defaultLocale: 'en',
-    detectBrowserLanguage: {
-      useCookie: true,
-      cookieKey: 'i18n_redirected',
-      redirectOn: 'root'
-    }
+    detectBrowserLanguage: false
   },
-  modules: ['@nuxtjs/seo', '@nuxtjs/i18n', '@nuxt/icon']
+  modules: ['@nuxtjs/seo', '@nuxtjs/i18n', '@nuxt/icon', '@vueuse/nuxt']
 })
