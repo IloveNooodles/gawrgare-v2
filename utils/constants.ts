@@ -4,8 +4,8 @@ export const routes = [
     name: "about",
   },
   {
-    to: "#experience",
-    name: "experience"
+    to: "#experiences",
+    name: "experiences"
   },
   {
     to: "#projects",

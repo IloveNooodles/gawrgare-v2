@@ -10,26 +10,44 @@
   <!--   </div> -->
   <!-- </div> -->
   <section class="content">
-    <h1 class="title">
-      Muhammad Garebaldhie ER Rahman
-    </h1>
-    <h2>
-      {{ $t('engineer') }}
-    </h2>
-    <p>
-      Hello, I'm Gare, a Software Engineer and Cybersecurity enthusiast
-    </p>
-    <p>
-      Currently working in Matchmade as an software engineer intern. Previously was working as an intern in Sayurbox,
-      Garena, makmur.id, and Stealth Startup.
-    </p>
-    <p>
-      I also enjoy doing CTF for fun. My favorite is binary and web exploitation.
-    </p>
-    <p>
-      I love to play games especially pokemon and monster hunter, listening to music, and watching movies. By far, my
-      favorite movies is Interstellar and Steins;Gate <span><a>test</a></span>
-    </p>
+    <article id="about">
+      <h1 class="title">
+        Muhammad Garebaldhie ER Rahman
+      </h1>
+      <h2>
+        {{ $t('engineer') }}
+      </h2>
+      <p>
+        Hello, I'm Gare, a Software Engineer and Cybersecurity enthusiast
+      </p>
+      <p>
+        Currently working in Matchmade as an software engineer intern. Previously was working as an intern in Sayurbox,
+        Garena, makmur.id, and Stealth Startup.
+      </p>
+      <p>
+        I also enjoy doing CTF for fun. My favorite is binary and web exploitation.
+      </p>
+      <p>
+        I love to play games especially pokemon and monster hunter, listening to music, and watching movies. By far, my
+        favorite movies is Interstellar and Steins;Gate <span><a>test</a></span>
+      </p>
+    </article>
+    <article id="experiences">
+      <li v-for="exp in experience">
+        <p>
+          {{ exp.name }}
+        </p>
+      </li>
+    </article>
+    <article id="projects">
+    </article>
+    <article id="awards">
+      <li v-for="award in awards">
+        <p>
+          {{ award.name }}
+        </p>
+      </li>
+    </article>
   </section>
 </template>
 

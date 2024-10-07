@@ -1,13 +1,12 @@
 <script setup lang="ts">
-const route = useRoute()
-const { t } = useI18n()
 const head = useLocaleHead({
   addDirAttribute: true,
   identifierAttribute: 'id',
   addSeoAttributes: true
 })
 const isDark = useDark({
-  selector: 'body',
+  writeDefaults: true,
+  initialValue: 'dark',
   attribute: 'class',
   valueDark: 'dark-theme',
   valueLight: 'light-theme',
