@@ -16,6 +16,7 @@ $themes: (
 
 @include themify($themes) {
 
+  body,
   header,
   main,
   footer {

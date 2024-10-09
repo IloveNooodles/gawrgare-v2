@@ -52,6 +52,43 @@
   }
 }
 
+.custom-select {
+  /* Basic styles */
+  /* width: 200px; */
+  padding: 10px;
+  font-size: 16px;
+  color: #333;
+  /*background-color: themed('surface') */
+  ;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  /* Remove default appearance */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  /* Positioning for the arrow */
+  background-image: url('data:image/svg+xml;charset=US-ASCII, %3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2710%27 height=%275%27 viewBox=%270 0 10 5%27%3E%3Cpath fill=%27%23000%27 d=%27M0 0l5 5 5-5H0z%27/%3E%3C/svg%3E');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 10px;
+  cursor: pointer;
+}
+
+.custom-select:hover {
+  border-color: #888;
+}
+
+.custom-select:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+/* Optional: Disable arrow for disabled options */
+.custom-select option:disabled {
+  color: #ccc;
+}
+
+
 /* .header { */
 /*   width: 60%; */
 /*   max-width: 80%; */
