@@ -29,7 +29,10 @@ export default defineNuxtConfig({
       { code: 'id', language: 'id-ID' }
     ],
     defaultLocale: 'en',
-    detectBrowserLanguage: false
+    detectBrowserLanguage: {
+      redirectOn: "root",
+      useCookie: true,
+    }
   },
   modules: ['@nuxtjs/seo', '@nuxtjs/i18n', '@nuxt/icon', '@vueuse/nuxt']
 })

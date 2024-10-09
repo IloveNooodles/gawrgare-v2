@@ -1,0 +1,62 @@
+.headingContainer {
+  width: 100%;
+
+  >* {
+    width: 85%;
+    margin: 0 auto;
+  }
+}
+
+.title {
+  font-size: 1.6rem;
+  line-height: 2.25rem;
+  margin: 0 auto;
+  font-family: 'Paytone One';
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+}
+
+.headerContentContainer {
+  margin: 4rem auto;
+
+  @include breakpoint(md) {
+    display: flex;
+    max-width: 85vw;
+    margin: 4rem auto;
+  }
+}
+
+.nav {
+  display: none;
+}
+
+.navButton {
+  width: 85%;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  gap: 1rem;
+
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  li {
+    list-style: none;
+  }
+}
+
+/* .header { */
+/*   width: 60%; */
+/*   max-width: 80%; */
+/* } */
+/**/
+/* .main { */
+/*   width: 50%; */
+/* } */

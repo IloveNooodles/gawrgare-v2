@@ -2,34 +2,25 @@
 </script>
 
 <template>
-  <!-- <div> -->
-  <!--   <div> -->
-  <!--     <p>{{ $t('welcome') }}</p> -->
-  <!--     <p>Date: {{ $d(new Date(), 'short') }}</p> -->
-  <!--     <p>Curr: {{ $n(1000, 'currency') }}</p> -->
-  <!--   </div> -->
-  <!-- </div> -->
   <section class="content">
+    <!-- <div> -->
+    <!--   <div> -->
+    <!--     <p>{{ $t('welcome') }}</p> -->
+    <!--     <p>Date: {{ $d(new Date(), 'short') }}</p> -->
+    <!--     <p>Curr: {{ $n(1000, 'currency') }}</p> -->
+    <!--   </div> -->
+    <!-- </div> -->
     <article id="about">
-      <h1 class="title">
-        Muhammad Garebaldhie ER Rahman
-      </h1>
-      <h2>
-        {{ $t('engineer') }}
-      </h2>
       <p>
-        Hello, I'm Gare, a Software Engineer and Cybersecurity enthusiast
+        I specialize in building robust backend systems, infrastructure, and managing deployments through Kubernetes.
+        While my focus is on the backend, I'm also comfortable with frontend development. I love doing CTF challenges to
+        expand my knowledge not only in cybersecurity but also in web
+        development and new tech trends.
       </p>
       <p>
-        Currently working in Matchmade as an software engineer intern. Previously was working as an intern in Sayurbox,
-        Garena, makmur.id, and Stealth Startup.
-      </p>
-      <p>
-        I also enjoy doing CTF for fun. My favorite is binary and web exploitation.
-      </p>
-      <p>
-        I love to play games especially pokemon and monster hunter, listening to music, and watching movies. By far, my
-        favorite movies is Interstellar and Steins;Gate <span><a>test</a></span>
+        While outisde of computer, i usually loves to play games and wathing movies. Pokemon and monster hunter by far
+        are my favorite ones, listening to music, and watching movies. By far, my
+        favorite movies is Interstellar and Steins;Gate
       </p>
     </article>
     <article id="experiences">
@@ -54,10 +45,5 @@
 <style lang="css" scoped>
 .title {
   font-family: 'Paytone One';
-}
-
-.content {
-  max-width: 85vw;
-  margin: 0 auto;
 }
 </style>
