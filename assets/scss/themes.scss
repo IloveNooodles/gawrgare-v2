@@ -1,18 +1,5 @@
-@import "./colors";
-@import "./mixins";
-
-$themes: (
-  dark: (primary: $primary-dark,
-    secondary: $secondary-dark,
-    text: $text-dark,
-    text-secondary: $text-secondary-dark,
-    surface: $surface-dark),
-  light: (primary: $primary-white,
-    secondary: $secondary-white,
-    text: $text-white,
-    text-secondary: $text-secondary-white,
-    surface: $surface-white),
-);
+@import "~/assets/scss/colors";
+@import "~/assets/scss/mixins";
 
 @include themify($themes) {
 

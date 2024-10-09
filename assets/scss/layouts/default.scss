@@ -1,3 +1,6 @@
+@import "~/assets/scss/colors";
+@import "~/assets/scss/mixins";
+
 .headingContainer {
   width: 100%;
 
@@ -37,7 +40,7 @@
   width: 85%;
   display: flex;
   align-items: center;
-  margin: 0 auto;
+  margin: 1rem auto;
   gap: 1rem;
 
 
@@ -52,25 +55,21 @@
   }
 }
 
+@include themify($themes) {
+  .custom-select {
+    color: themed('text');
+  }
+}
+
+
 .custom-select {
-  /* Basic styles */
-  /* width: 200px; */
   padding: 10px;
   font-size: 16px;
-  color: #333;
-  /*background-color: themed('surface') */
-  ;
-  border: 2px solid #ccc;
+  background-color: transparent;
   border-radius: 4px;
-  /* Remove default appearance */
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  /* Positioning for the arrow */
-  background-image: url('data:image/svg+xml;charset=US-ASCII, %3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2710%27 height=%275%27 viewBox=%270 0 10 5%27%3E%3Cpath fill=%27%23000%27 d=%27M0 0l5 5 5-5H0z%27/%3E%3C/svg%3E');
-  background-repeat: no-repeat;
-  background-position: right 10px center;
-  background-size: 10px;
   cursor: pointer;
 }
 
