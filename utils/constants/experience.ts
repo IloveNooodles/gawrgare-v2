@@ -1,5 +1,6 @@
 export type Experience = {
   name: string;
+  title: string;
   year_start: number;
   year_end: number;
   url: string;
@@ -10,6 +11,7 @@ export type Experience = {
 export const experiences: Experience[] = [
   {
     name: "Sayurbox",
+    title: "Software Development Engineer Intern",
     year_start: 2021,
     year_end: 2022,
     tag: ["A", "B", "C"],
@@ -18,6 +20,7 @@ export const experiences: Experience[] = [
   },
   {
     name: "Matchmade",
+    title: "Software Engineer",
     year_start: 2023,
     year_end: 2024,
     tag: ["A", "B", "C"],
@@ -27,6 +30,7 @@ export const experiences: Experience[] = [
   {
     name: "Garena",
     year_start: 2022,
+    title: "Backend Engineer Intern",
     year_end: 2022,
     tag: ["A", "B", "C"],
     description: "",
@@ -34,6 +38,7 @@ export const experiences: Experience[] = [
   },
   {
     name: "Makmur",
+    title: "Backend Engineer Intern",
     year_start: 2023,
     year_end: 2023,
     tag: ["A", "B", "C"],

@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import "~/assets/scss/layouts/default.scss";
+import { languages } from "~/utils/constants/languages";
+import { navIcons } from "~/utils/constants/nav";
+import { routes } from "~/utils/constants/route";
 
 const head = useLocaleHead({
   addDirAttribute: true,

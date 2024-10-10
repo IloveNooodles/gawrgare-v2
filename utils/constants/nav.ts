@@ -5,7 +5,7 @@ export type NavIcon = {
 }
 
 
-export const navIcons = [
+export const navIcons: NavIcon[] = [
   {
     name: "Github",
     icon: "ri:github-line",
