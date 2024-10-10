@@ -53,7 +53,7 @@ h6 {
 
 p {
   font-size: 1rem;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
   line-height: 1.5rem;
 }
 
@@ -61,8 +61,12 @@ a {
   font-size: 1rem;
   letter-spacing: 0.5px;
   line-height: 1.5rem;
-  text-decoration: underline dotted;
+  text-decoration: none;
   cursor: pointer;
+
+  &:hover {
+    text-decoration: underline dotted;
+  }
 }
 
 small {

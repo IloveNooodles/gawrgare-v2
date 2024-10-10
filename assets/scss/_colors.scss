@@ -8,25 +8,43 @@ $primary-dark: #0f0d0e;
 $secondary-dark: #1b191a;
 $text-dark: #f9f4da;
 $text-secondary-dark: #b4af9d;
+$text-hover-dark: #f7f7f7;
 $surface-dark: #231f20;
 
 // white
 $primary-white: #f7f7f7;
 $secondary-white: #ffffff;
 $text-white: #231f20;
+$text-hover-white: #b4af9d;
 $text-secondary-white: #615f60;
 $surface-white: #8c8b8b;
 
-
+// theme
 $themes: (
   dark: (primary: $primary-dark,
     secondary: $secondary-dark,
     text: $text-dark,
+    text-hover: $text-hover-dark,
     text-secondary: $text-secondary-dark,
-    surface: $surface-dark),
+    surface: $surface-dark ),
   light: (primary: $primary-white,
     secondary: $secondary-white,
     text: $text-white,
+    text-hover: $text-hover-white,
     text-secondary: $text-secondary-white,
     surface: $surface-white),
 );
+
+
+@mixin themify($themes) {
+  @each $name, $values in $themes {
+    .#{"#{$name}"}-theme {
+$theme-map: $values !global;
+    @content;
+  }
+}
+}
+
+@function themed($key) {
+  @return map-get($theme-map, $key);
+}
