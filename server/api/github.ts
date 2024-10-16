@@ -5,20 +5,22 @@ export default defineEventHandler(async (event) => {
   event.node.res.setHeader('Content-Type', 'application/json');
 
   let page = 1;
+  let per_page = 15;
   try {
     let query = await getValidatedQuery(event, projectQueryParamSchema.parse)
-    page = query.page
+    page = parseInt(query.page || '1')
+    per_page = parseInt(query.per_page || '15')
   } catch (err) {
     setResponseStatus(event, 400, "Bad Request")
     return {
-      message: "page should be an integer"
+      message: `page should be an integer`
     }
   }
 
   const octokit = new Octokit()
   const repositories = await octokit.rest.repos.listForUser({
     username: "ILoveNooodles",
-    per_page: 15,
+    per_page: per_page,
     page: page,
     sort: "updated",
     direction: "desc"
@@ -35,7 +37,7 @@ export default defineEventHandler(async (event) => {
       "pushed_at": project.pushed_at,
       "svn_url": project.svn_url,
       "language": project.language,
-      "license": project.license,
+      "license": project.license?.name,
       "topics": project.topics,
       "visibility": project.visibility,
       "stargazers_count": project.stargazers_count,

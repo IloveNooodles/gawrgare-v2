@@ -18,12 +18,10 @@ const isDark = useDark({
 });
 const toggleDark = useToggle(isDark);
 const { locale, setLocale } = useI18n()
-
 const changeLocale = (event: Event) => {
   const selectedLocale = (event.target as HTMLSelectElement).value;
   setLocale(selectedLocale)
 }
-
 </script>
 
 <template>
@@ -31,7 +29,7 @@ const changeLocale = (event: Event) => {
     <Html :lang="head.htmlAttrs.lang" :dir="head.htmlAttrs.dir">
 
     <Head>
-      <Title>mgarebaldhie.me</Title>
+      <Title>Muhammad Garebaldhie</Title>
       <template v-for="link in head.link" :key="link.id">
         <Link :id="link.id" :rel="link.rel" :href="link.href" :hreflang="link.hreflang" />
       </template>

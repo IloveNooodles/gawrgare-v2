@@ -10,6 +10,7 @@
     background: themed("primary");
   }
 
+  a,
   p,
   h1,
   h2,
@@ -18,6 +19,16 @@
   h5,
   h6 {
     color: themed("text");
+
+    &::selection {
+      color: themed('text');
+      background-color: themed('surface');
+    }
+
+    &::-moz-selection {
+      color: red;
+      background-color: blue;
+    }
   }
 
   svg,
@@ -41,5 +52,15 @@
   button {
     background-color: themed("secondary");
     color: themed("text");
+  }
+}
+
+.hidden {
+  display: block;
+}
+
+@include breakpoint(md) {
+  .hidden {
+    display: none;
   }
 }

@@ -6,22 +6,24 @@ const exp = defineProps<Experience>()
 </script>
 
 <template>
-  <span>
-    <NuxtLink :to="exp.url">
-      {{ exp.title }}
-    </NuxtLink>
-
-  </span>
-  <p>
-    {{ exp.name }}
-  </p>
-  <p>
-    {{ exp.year_start }} - {{ exp.year_end }}
-  </p>
-  <p>
-    {{ exp.description }}
-  </p>
-  <p>{{ exp.tag[0] }}</p>
+  <NuxtLink :to="exp.url" target="_blank">
+    <div class="container">
+      <p class="cardTitle">
+        {{ exp.title }} — {{ exp.name }}
+      </p>
+      <p class="year">
+        {{ exp.year_start }} — {{ exp.year_end }}
+      </p>
+      <p class="desc">
+        {{ exp.description }}
+      </p>
+      <div class="tagContainer">
+        <Tag v-for="t in exp.tag" key="t" :text="t" />
+      </div>
+    </div>
+  </NuxtLink>
 </template>
 
-<style lang="scss" scoped></style>
+<style scoped lang="scss">
+@import url("~/assets/scss/card/index.scss");
+</style>

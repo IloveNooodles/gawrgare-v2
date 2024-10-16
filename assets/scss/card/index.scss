@@ -1,0 +1,46 @@
+@import "~/assets/scss/colors";
+@import "~/assets/scss/mixins";
+
+.container {
+  padding: 1rem 0;
+  transition: 0.2s all ease;
+  cursor: pointer;
+  margin: 1rem 0;
+}
+
+.year {
+  font-size: 0.75rem;
+}
+
+.desc {
+  font-size: 0.875rem;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+
+.tagContainer {
+  display: flex;
+  margin: 0.5rem 0;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 0.4rem;
+}
+
+@include themify($themes) {
+  .cardTitle {
+    color: themed('text');
+  }
+
+  .container {
+    &:hover {
+      background-color: themed('surface');
+    }
+  }
+}

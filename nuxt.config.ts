@@ -7,7 +7,6 @@ export default defineNuxtConfig({
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
     },
-    // baseURL: "https://mgarebaldhie.me",
     pageTransition: { name: 'page', mode: 'out-in' },
   },
   devtools: { enabled: true },
@@ -16,7 +15,7 @@ export default defineNuxtConfig({
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: '@use "~/assets/scss/_colors.scss" as colors; @use "~/assets/scss/_mixins.scss" as mixins; @use "~/assets/scss/_variables.scss" as variables;',
+          additionalData: '@use "~/assets/scss/_colors.scss" as colors; @use "~/assets/scss/_mixins.scss" as mixins;',
         }
       }
     }

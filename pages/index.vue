@@ -5,9 +5,13 @@
 
 <template>
   <section class="content">
+    <h5 class="hidden">About</h5>
     <HomeAbout />
+    <h5 class="hidden">Experiences</h5>
     <HomeExperiences />
+    <h5 class="hidden">Projects</h5>
     <HomeProjects />
+    <h5 class="hidden">Awards</h5>
     <HomeAwards />
   </section>
 </template>
