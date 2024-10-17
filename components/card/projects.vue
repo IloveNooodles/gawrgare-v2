@@ -11,7 +11,12 @@ const props = defineProps<Props>();
 <template>
   <NuxtLink :to="project.svn_url" target="_blank">
     <div class="container">
-      <p class="cardTitle">{{ props.project.name }}</p>
+      <div class="titleFlex">
+        <p class="cardTitle">{{ props.project.name }}</p>
+        <p class="cardTitle">
+          {{ $d(new Date(props.project.updated_at!), 'short') }}
+        </p>
+      </div>
       <p class="desc">
         {{ props.project.description }}
       </p>

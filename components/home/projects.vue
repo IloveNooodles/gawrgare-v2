@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { Res } from '~/types/response';
 
-const { status, data } = await useFetch<Res<Array<any>>>('/api/githubs', {
+const { status, data } = await useFetch<Res<Array<any>>>('/api/github', {
   query: { per_page: 5 },
   lazy: true,
 });
@@ -17,11 +17,17 @@ const projectData = data.value?.data;
         :key="project.id"
       />
     </article>
-    <div v-else-if="status == 'error'">error</div>
+    <div v-else-if="status == 'error'">
+      <p class="margin">Cannot load projects</p>
+    </div>
     <template #fallback>
       <CardSkeleton />
     </template>
   </Suspense>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.margin {
+  margin: 1rem 0;
+}
+</style>
