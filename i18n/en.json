@@ -1,4 +1,9 @@
 {
-  "welcome": "Hello",
-  "engineer": "Software Engineer"
+  "engineer": "software engineer",
+  "about": "about",
+  "experiences": "experiences",
+  "awards": "awards",
+  "projects": "projects",
+  "awardfirst": "1st Place",
+  "awardplace": "{count}nd place | {count}rd place | {count}th place"
 }

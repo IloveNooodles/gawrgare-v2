@@ -6,6 +6,11 @@
   transition: 0.2s all ease;
   cursor: pointer;
   margin: 1rem 0;
+
+  &:first-child {
+    margin-top: 0.25rem;
+    padding-top: 0.25rem;
+  }
 }
 
 .year {

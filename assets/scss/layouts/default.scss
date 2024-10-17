@@ -27,7 +27,7 @@
 
   @include breakpoint(md) {
     display: flex;
-    max-width: 85vw;
+    max-width: 85%;
     margin: 4rem auto;
   }
 }

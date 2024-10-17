@@ -1,102 +1,86 @@
-import en from "./i18n/en.json"
-import id from "./i18n/id.json"
-import ja from "./i18n/ja.json"
+import en from './i18n/en.json';
+import id from './i18n/id.json';
+import ja from './i18n/ja.json';
 
 export default defineI18nConfig(() => ({
   legacy: false,
   locale: 'en',
   messages: {
-    en: en,
+    en: {
+      ...en,
+      awardplace: (ctx: { named: (arg0: string) => number }) => {
+        const number = ctx.named('count');
+
+        const suffixes: Record<number, string> = {
+          1: 'st place',
+          2: 'nd place',
+          3: 'rd place',
+        };
+        const suffix = suffixes[number % 10] || 'th place';
+
+        return `${number}${suffix}`;
+      },
+    },
     id: id,
-    ja: ja
+    ja: ja,
   },
   numberFormats: {
-    'en': {
+    en: {
       currency: {
         style: 'currency',
         currency: 'USD',
-        notation: 'standard'
+        notation: 'standard',
       },
       decimal: {
         style: 'decimal',
         minimumFractionDigits: 2,
-        maximumFractionDigits: 2
+        maximumFractionDigits: 2,
       },
       percent: {
         style: 'percent',
-        useGrouping: false
-      }
+        useGrouping: false,
+      },
     },
-    'id': {
+    id: {
       currency: {
         style: 'currency',
         currency: 'IDR',
-        notation: 'standard'
+        notation: 'standard',
       },
       decimal: {
         style: 'decimal',
         minimumFractionDigits: 2,
-        maximumFractionDigits: 2
+        maximumFractionDigits: 2,
       },
       percent: {
         style: 'percent',
-        useGrouping: false
-      }
+        useGrouping: false,
+      },
     },
-    'ja': {
+    ja: {
       currency: {
         style: 'currency',
         currency: 'JPY',
         useGrouping: true,
-        currencyDisplay: 'symbol'
+        currencyDisplay: 'symbol',
       },
       decimal: {
         style: 'decimal',
         minimumSignificantDigits: 3,
-        maximumSignificantDigits: 5
+        maximumSignificantDigits: 5,
       },
       percent: {
         style: 'percent',
-        useGrouping: false
-      }
-    }
+        useGrouping: false,
+      },
+    },
   },
   datetimeFormats: {
-    'en': {
+    en: {
       short: {
-        year: 'numeric',
-        month: 'short',
-        day: 'numeric'
-      },
-      long: {
         year: 'numeric',
         month: 'short',
         day: 'numeric',
-        weekday: 'short',
-        hour: 'numeric',
-        minute: 'numeric'
-      }
-    },
-    'id': {
-      short: {
-        year: 'numeric',
-        month: 'short',
-        day: 'numeric'
-      },
-      long: {
-        year: 'numeric',
-        month: 'short',
-        day: 'numeric',
-        weekday: 'short',
-        hour: 'numeric',
-        minute: 'numeric'
-      }
-    },
-    'ja': {
-      short: {
-        year: 'numeric',
-        month: 'short',
-        day: 'numeric'
       },
       long: {
         year: 'numeric',
@@ -105,8 +89,38 @@ export default defineI18nConfig(() => ({
         weekday: 'short',
         hour: 'numeric',
         minute: 'numeric',
-        hour12: true
-      }
-    }
+      },
+    },
+    id: {
+      short: {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
+      },
+      long: {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
+        weekday: 'short',
+        hour: 'numeric',
+        minute: 'numeric',
+      },
+    },
+    ja: {
+      short: {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
+      },
+      long: {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
+        weekday: 'short',
+        hour: 'numeric',
+        minute: 'numeric',
+        hour12: true,
+      },
+    },
   },
-}))
+}));

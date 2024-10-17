@@ -1,4 +1,9 @@
 {
-  "welcome": "Hai",
-  "engineer": "Programmer"
+  "engineer": "programmer",
+  "about": "tentang",
+  "experiences": "pengalaman",
+  "awards": "prestasi",
+  "projects": "projek",
+  "awardfirst": "Juara Pertama",
+  "awardplace": "Juara kedua | Juara Ketiga | Juara ke-{count}"
 }

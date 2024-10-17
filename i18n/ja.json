@@ -1,4 +1,9 @@
 {
-  "welcome": "ようこそ",
-  "engineer": "エンジニア"
+  "engineer": "エンジニア",
+  "about": "自己紹介",
+  "experiences": "経験",
+  "awards": "賞",
+  "projects": "プロジェクト",
+  "awardfirst": "1位",
+  "awardplace": "{count}位"
 }

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { Res } from '~/types/response';
 
-const { status, data } = await useFetch<Res<Array<any>>>('/api/github', {
+const { status, data } = await useFetch<Res<Array<any>>>('/api/githubs', {
   query: { per_page: 5 },
   lazy: true,
 });
