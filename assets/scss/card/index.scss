@@ -1,5 +1,5 @@
-@import "~/assets/scss/colors";
-@import "~/assets/scss/mixins";
+@import '~/assets/scss/colors';
+@import '~/assets/scss/mixins';
 
 .container {
   padding: 1rem 0;
@@ -24,7 +24,6 @@ a {
   }
 }
 
-
 .tagContainer {
   display: flex;
   margin: 0.5rem 0;
@@ -43,4 +42,10 @@ a {
       background-color: themed('surface');
     }
   }
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
 }

@@ -21,6 +21,7 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@octokit/types": "^13.6.1",
     "@types/bun": "latest",
     "sass-embedded": "^1.79.4",
     "stylelint": "^16.9.0",
