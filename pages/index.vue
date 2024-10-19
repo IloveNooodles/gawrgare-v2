@@ -18,4 +18,8 @@
   max-width: 85%;
   margin: 0 auto;
 }
+
+.test {
+  display: flex;
+}
 </style>
