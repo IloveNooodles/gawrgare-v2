@@ -9,6 +9,11 @@ export default defineNuxtConfig({
     },
     pageTransition: { name: 'page', mode: 'out-in' },
   },
+  router: {
+    options: {
+      scrollBehaviorType: "smooth"
+    }
+  },
   devtools: { enabled: true },
   css: ['~/assets/scss/reset.scss', '~/assets/scss/index.scss', '~/assets/scss/themes.scss'],
   vite: {

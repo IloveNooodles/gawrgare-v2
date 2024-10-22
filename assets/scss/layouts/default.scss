@@ -4,7 +4,7 @@
 .headingContainer {
   width: 100%;
 
-  > * {
+  >* {
     width: 85%;
     margin: 0 auto;
   }
@@ -15,12 +15,21 @@
   line-height: 2.25rem;
   margin: 0 auto;
   font-family: 'Paytone One';
+
+  @include breakpoint(md) {
+    margin: 0;
+  }
+
 }
 
 .subtitle {
   font-size: 1.5rem;
   line-height: 2.25rem;
   text-transform: capitalize;
+
+  @include breakpoint(md) {
+    margin: 0;
+  }
 }
 
 .headerContentContainer {
@@ -28,13 +37,17 @@
 
   @include breakpoint(md) {
     display: flex;
-    max-width: 85%;
+    max-width: 90%;
     margin: 4rem auto;
   }
 }
 
 .nav {
   display: none;
+
+  @include breakpoint(md) {
+    display: block;
+  }
 }
 
 .navButton {
@@ -52,6 +65,10 @@
 
   li {
     list-style: none;
+  }
+
+  @include breakpoint(md) {
+    margin: 0;
   }
 }
 
@@ -84,4 +101,28 @@
 
 .custom-select option:disabled {
   color: #ccc;
+}
+
+.hidden {
+  @include breakpoint(md) {
+    display: none;
+  }
+}
+
+.header {
+  @include breakpoint(md) {
+    position: sticky;
+    top: 5%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding-top: 0;
+    max-height: 400px;
+  }
+}
+
+.main {
+  @include breakpoint(md) {
+    width: 85%;
+  }
 }

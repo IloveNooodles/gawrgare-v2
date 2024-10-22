@@ -10,7 +10,7 @@ const props = defineProps<Props>();
 
 <template>
   <NuxtLink :to="project.svn_url" target="_blank">
-    <div class="container">
+    <div class="container animation">
       <div class="titleFlex">
         <p class="cardTitle">{{ props.project.name }}</p>
         <p class="cardTitle">

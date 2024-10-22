@@ -69,10 +69,22 @@ a {
   }
 }
 
+section {
+  scroll-margin-top: 4em;
+}
+
 small {
   font-size: 0.833rem;
 }
 
 .capitalize {
   text-transform: capitalize;
+}
+
+.animation {
+  transition: 0.2s all cubic-bezier(0.55, 0.085, 0.68, 0.53);
+
+  &:hover {
+    transform: translateX(10px);
+  }
 }

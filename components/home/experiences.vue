@@ -3,9 +3,9 @@ import { experiences } from '~/utils/constants/experience';
 </script>
 
 <template>
-  <article id="experiences">
+  <section id="experiences">
     <Card v-for="exp in experiences" v-bind="exp" />
-  </article>
+  </section>
 </template>
 
 <style scoped lang="scss"></style>

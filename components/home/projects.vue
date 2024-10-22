@@ -10,13 +10,9 @@ const projectData = data.value?.data;
 </script>
 <template>
   <Suspense>
-    <article id="projects" v-if="status == 'success'">
-      <CardProjects
-        v-for="project in projectData"
-        :project="project"
-        :key="project.id"
-      />
-    </article>
+    <section id="projects" v-if="status == 'success'">
+      <CardProjects v-for="project in projectData" :project="project" :key="project.id" />
+    </section>
     <div v-else-if="status == 'error'">
       <p class="margin">Cannot load projects</p>
     </div>

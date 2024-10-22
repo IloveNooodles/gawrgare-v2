@@ -6,10 +6,12 @@ const exp = defineProps<Experience>();
 
 <template>
   <NuxtLink :to="exp.url" target="_blank">
-    <div class="container">
+    <div class="container animation">
       <p class="cardTitle">
         {{ exp.title }} — {{ exp.name }}
-        <span> <Icon name="material-symbols:arrow-outward" /> </span>
+        <span>
+          <Icon name="material-symbols:arrow-outward" />
+        </span>
       </p>
       <p class="year">{{ exp.year_start }} — {{ exp.year_end }}</p>
       <p class="desc">

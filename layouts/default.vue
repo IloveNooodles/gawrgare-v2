@@ -18,38 +18,33 @@ const isDark = useDark({
 <template>
   <div>
     <Html :lang="head.htmlAttrs.lang" :dir="head.htmlAttrs.dir">
-      <Head>
-        <Title>Muhammad Garebaldhie</Title>
-        <template v-for="link in head.link" :key="link.id">
-          <Link
-            :id="link.id"
-            :rel="link.rel"
-            :href="link.href"
-            :hreflang="link.hreflang"
-          />
-        </template>
-        <template v-for="meta in head.meta" :key="meta.id">
-          <Meta
-            :id="meta.id"
-            :property="meta.property"
-            :content="meta.content"
-          />
-        </template>
-      </Head>
 
-      <Body id="app">
-        <div class="headerContentContainer">
-          <header class="header">
+    <Head>
+      <Title>Muhammad Garebaldhie</Title>
+      <template v-for="link in head.link" :key="link.id">
+        <Link :id="link.id" :rel="link.rel" :href="link.href" :hreflang="link.hreflang" />
+      </template>
+      <template v-for="meta in head.meta" :key="meta.id">
+        <Meta :id="meta.id" :property="meta.property" :content="meta.content" />
+      </template>
+    </Head>
+
+    <Body id="app">
+      <div class="headerContentContainer">
+        <header class="header">
+          <div class="headerContent">
             <NavHeading />
             <NavContent />
-            <NavButton />
-          </header>
-          <main class="main">
-            <slot />
-          </main>
-        </div>
-        <footer></footer>
-      </Body>
+          </div>
+          <NavButton />
+        </header>
+        <main class="main">
+          <slot />
+        </main>
+      </div>
+      <footer></footer>
+    </Body>
+
     </Html>
   </div>
 </template>
