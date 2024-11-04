@@ -1,5 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
+
+@font-face {
+  font-family: "Inter";
+  src: url("~/assets/fonts/inter.ttf");
+}
+
+@font-face {
+  font-family: "Paytone One";
+  src: url("~/assets/fonts/PaytoneOne.ttf");
+}
 
 a,
 p,
