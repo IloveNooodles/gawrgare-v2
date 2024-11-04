@@ -6,13 +6,6 @@ const head = useLocaleHead({
   identifierAttribute: 'id',
   addSeoAttributes: true,
 });
-const isDark = useDark({
-  writeDefaults: true,
-  initialValue: 'dark',
-  attribute: 'class',
-  valueDark: 'dark-theme',
-  valueLight: 'light-theme',
-});
 </script>
 
 <template>
@@ -30,19 +23,20 @@ const isDark = useDark({
     </Head>
 
     <Body id="app">
-      <div class="headerContentContainer">
-        <header class="header">
-          <div class="headerContent">
-            <NavHeading />
-            <NavContent />
-          </div>
-          <NavButton />
-        </header>
-        <main class="main">
-          <slot />
-        </main>
-      </div>
-      <footer></footer>
+      <ClientOnly>
+        <div class="headerContentContainer">
+          <header class="header">
+            <div class="headerContent">
+              <NavHeading />
+              <NavContent />
+            </div>
+            <NavButton />
+          </header>
+          <main class="main">
+            <slot />
+          </main>
+        </div>
+      </ClientOnly>
     </Body>
 
     </Html>
