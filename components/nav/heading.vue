@@ -5,7 +5,8 @@
     <h2 class="subtitle">
       {{ $t('engineer') }}
     </h2>
+    <NavBlog class="none" />
   </div>
 </template>
 
-<style lang="css" scoped></style>
+<style lang="scss" scoped></style>
