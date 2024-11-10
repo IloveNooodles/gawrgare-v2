@@ -1,0 +1,19 @@
+@import '~/assets/scss/colors';
+@import '~/assets/scss/mixins';
+
+@include themify($themes){
+  .special {
+    padding: 1rem 1rem;
+    border: 1px solid white;
+    display: block;
+    width: fit-content;
+    self-align: start;
+    @include breakpoint(md){
+      display: none;
+    }
+  }
+}
+
+.special-invert {
+
+}
