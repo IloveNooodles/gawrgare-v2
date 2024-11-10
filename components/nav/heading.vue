@@ -5,14 +5,8 @@
     <h2 class="subtitle">
       {{ $t('engineer') }}
     </h2>
-    <p class="special">
-      <NuxtLink to="/blog">
-        {{ $t('seeblog') }}
-      </NuxtLink>
-    </p>
+    <NavBlog class="none" />
   </div>
 </template>
 
-<style lang="scss" scoped>
-@import url("~/assets/scss/nav/heading.scss");
-</style>
+<style lang="scss" scoped></style>

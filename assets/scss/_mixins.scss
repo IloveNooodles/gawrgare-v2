@@ -61,3 +61,17 @@ $breakpoints: (
     }
   }
 }
+
+.none {
+  @include breakpoint(md) {
+    display: none;
+  }
+}
+
+.invert {
+  display: none;
+
+  @include breakpoint(md){
+    display: block;
+  }
+}

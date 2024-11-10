@@ -6,6 +6,7 @@ import { routes } from '~/utils/constants/route';
     <div class="headerContainer">
       <ThemeButton />
       <Lang />
+      <NavBlog class="invert grow" />
     </div>
     <ul>
       <li v-for="route in routes" :key="route.name" class="animation">
@@ -17,7 +18,7 @@ import { routes } from '~/utils/constants/route';
   </nav>
 </template>
 
-<style lang="css" scoped>
+<style lang="scss" scoped>
 .headerContainer {
   display: flex;
   justify-content: start;

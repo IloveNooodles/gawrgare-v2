@@ -1,0 +1,40 @@
+@import '~/assets/scss/colors';
+@import '~/assets/scss/mixins';
+
+.special-container {
+  display: flex;
+  justify-content: start;
+  margin: 0 auto;
+  width: 85%;
+
+  @include breakpoint(md){
+    width: 100%;
+    margin: 0;
+  }
+}
+
+.special {
+  padding: 0.5rem;
+  border: 1px solid;
+  justify-content: start;
+  width: fit-content;
+  border-radius: 0.25rem;
+  margin-top: 1rem;
+
+  @include breakpoint(md){
+    margin-top: 0;
+  }
+}
+
+
+@include themify($themes){
+  .special {
+    color: themed('text');
+    border-color: themed('text-secondary');
+
+    &:hover {
+      background-color: themed('surface');
+      border-color: themed('text');
+    }
+  }
+}
