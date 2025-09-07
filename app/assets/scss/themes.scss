@@ -31,7 +31,8 @@
     color: mixins.themed("text-secondary");
   }
 
-  svg {
+  svg,
+  .icon {
     color: mixins.themed("text-secondary");
 
     &:hover {

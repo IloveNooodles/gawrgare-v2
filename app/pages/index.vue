@@ -7,7 +7,7 @@
     <h5 class="capitalize">{{ $t('experiences') }}</h5>
     <HomeExperiences />
     <h5 class="capitalize">{{ $t('projects') }}</h5>
-    <LazyHomeProjects />
+    <HomeProjects />
     <h5 class="capitalize">{{ $t('awards') }}</h5>
     <HomeAwards />
   </section>

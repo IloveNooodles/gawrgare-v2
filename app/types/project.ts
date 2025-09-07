@@ -1,18 +1,18 @@
 export type Project = {
-  "id": string,
-  "name": string,
-  "private": string,
-  "description": string,
-  "created_at": string,
-  "updated_at": string,
-  "pushed_at": string,
-  "svn_url": string,
-  "language": string,
-  "license"?: string,
-  "topics": string[],
-  "visibility": boolean,
-  "stargazers_count": number,
-  "forks": number,
-  "open_issues": number,
-  "watchers": number,
-}
+  id: string;
+  name: string;
+  private: boolean;
+  description: string;
+  created_at: string;
+  updated_at: string;
+  pushed_at: string;
+  svn_url: string;
+  language: string;
+  license?: string;
+  topics: string[];
+  visibility: boolean;
+  stargazers_count: number;
+  forks: number;
+  open_issues: number;
+  watchers: number;
+};

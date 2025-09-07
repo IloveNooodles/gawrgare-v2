@@ -4,7 +4,7 @@ import { experiences } from '~/utils/constants/experience';
 
 <template>
   <section id="experiences">
-    <Card v-for="exp in experiences" v-bind="exp" />
+    <Card v-for="exp in experiences" v-bind="exp" :key="exp.name" />
   </section>
 </template>
 

@@ -1,20 +1,18 @@
 <script setup lang="ts">
-import type { GetRepositoryResponse } from '~/utils/github';
+import { type Project } from '~/types/project';
 
-interface Props {
-  project: GetRepositoryResponse;
-}
-
-const props = defineProps<Props>();
+const props = defineProps<{
+  project: Project;
+}>();
 </script>
 
 <template>
-  <NuxtLink :to="project.svn_url" target="_blank">
+  <NuxtLink :to="props.project.svn_url" target="_blank">
     <div class="container animation">
       <div class="titleFlex">
         <p class="cardTitle">{{ props.project.name }}</p>
         <p class="cardTitle">
-          {{ $d(new Date(props.project.updated_at!), 'short') }}
+          {{ $d(new Date(props.project.updated_at), 'short') }}
         </p>
       </div>
       <p class="desc">
@@ -27,7 +25,7 @@ const props = defineProps<Props>();
         </p>
       </div>
       <div class="tagContainer">
-        <Tag v-for="t in props.project.topics" :text="t" />
+        <Tag v-for="t in props.project.topics" :text="t" :key="t" />
       </div>
     </div>
   </NuxtLink>

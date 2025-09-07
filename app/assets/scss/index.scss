@@ -96,6 +96,14 @@ small {
   padding: 1rem;
 }
 
+.icon {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  vertical-align: middle;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
 .animation {
   transition: 0.2s all cubic-bezier(0.55, 0.085, 0.68, 0.53);
 

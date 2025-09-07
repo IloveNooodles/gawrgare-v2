@@ -12,9 +12,9 @@ const sortedYear = Array.from(uniqueYear).sort().reverse();
 
 <template>
   <section id="awards">
-    <div v-for="year in sortedYear">
+    <div v-for="year in sortedYear" :key="year">
       <h6>{{ year }}</h6>
-      <div class="padding animation" v-for="award in grouppedByYear[year]">
+      <div class="padding animation" v-for="award in grouppedByYear[year]" :key="award.name">
         <p v-if="award.place == 1">
           [{{ award.scope }}] {{ `${award.name} — ${award.organizer}` }},
           {{ $t('awardfirst') }}

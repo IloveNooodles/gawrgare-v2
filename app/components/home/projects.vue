@@ -1,25 +1,12 @@
 <script setup lang="ts">
-import type { Res } from '~/types/response';
+import { GITHUB_PROJECTS } from '~/utils/constants/projects';
+const projectData = GITHUB_PROJECTS;
 
-const { status, data } = await useFetch<Res<Array<any>>>('/api/github', {
-  query: { per_page: 5 },
-  lazy: true,
-});
-
-const projectData = data.value?.data;
 </script>
 <template>
-  <Suspense>
-    <section id="projects" v-if="status == 'success'">
-      <CardProjects v-for="project in projectData" :project="project" :key="project.id" />
-    </section>
-    <div v-else-if="status == 'error'">
-      <p class="margin">Cannot load projects</p>
-    </div>
-    <template #fallback>
-      <CardSkeleton />
-    </template>
-  </Suspense>
+  <section id="projects">
+    <CardProjects v-for="project in projectData" :project="project" :key="project.id" />
+  </section>
 </template>
 
 <style lang="scss" scoped>

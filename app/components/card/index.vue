@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { type Experience } from '~/utils/constants/experience';
-
 const exp = defineProps<Experience>();
+
 </script>
 
 <template>

@@ -1,11 +1,10 @@
 <script setup lang="ts">
 import { languages } from '~/utils/constants/languages';
 
-
 const { locale, setLocale } = useI18n();
 const changeLocale = (event: Event) => {
   const selectedLocale = (event.target as HTMLSelectElement).value;
-  setLocale(selectedLocale);
+  setLocale(selectedLocale as typeof locale.value);
 };
 
 </script>
