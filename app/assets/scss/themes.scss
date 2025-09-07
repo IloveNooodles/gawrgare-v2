@@ -1,13 +1,9 @@
-@import "~/assets/scss/colors";
-@import "~/assets/scss/mixins";
-
-@include themify($themes) {
-
+@include mixins.themify(colors.$themes) {
   body,
   header,
   main,
   footer {
-    background: themed("primary");
+    background: mixins.themed("primary");
   }
 
   a,
@@ -18,11 +14,11 @@
   h4,
   h5,
   h6 {
-    color: themed("text");
+    color: mixins.themed("text");
 
     &::selection {
-      color: themed('text');
-      background-color: themed('surface');
+      color: mixins.themed("text");
+      background-color: mixins.themed("surface");
     }
 
     &::-moz-selection {
@@ -32,42 +28,42 @@
   }
 
   p {
-    color: themed("text-secondary");
+    color: mixins.themed("text-secondary");
   }
 
   svg {
-    color: themed("text-secondary");
+    color: mixins.themed("text-secondary");
 
     &:hover {
-      color: themed("text");
+      color: mixins.themed("text");
     }
   }
 
   a {
-    color: themed('text');
+    color: mixins.themed("text");
 
     &:hover {
-      color: themed("text-hover");
+      color: mixins.themed("text-hover");
 
       svg {
-        transition: 0.1s all cubic-bezier(0.23, 1, 0.320, 1);
-        color: themed("text-secondary");
+        transition: 0.1s all cubic-bezier(0.23, 1, 0.32, 1);
+        color: mixins.themed("text-secondary");
 
         &:hover {
-          color: themed("text");
+          color: mixins.themed("text");
         }
       }
 
       button {
-        background-color: themed("secondary");
-        color: themed("text");
+        background-color: mixins.themed("secondary");
+        color: mixins.themed("text");
       }
     }
 
     .hidden {
       display: block;
 
-      @include breakpoint(md) {
+      @include mixins.breakpoint(md) {
         display: none;
       }
     }

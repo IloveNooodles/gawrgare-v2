@@ -1,3 +1,4 @@
+@use "sass:map";
 $primary-color: #d2d2d2;
 $secondary-color: #322332;
 $accent-color: #435434;
@@ -36,15 +37,18 @@ $themes: (
 );
 
 
+// Global variable to store current theme map
+$theme-map: () !default;
+
 @mixin themify($themes) {
   @each $name, $values in $themes {
     .#{"#{$name}"}-theme {
-$theme-map: $values !global;
-    @content;
+      $theme-map: $values !global;
+      @content;
+    }
   }
-}
 }
 
 @function themed($key) {
-  @return map-get($theme-map, $key);
+  @return map.get($theme-map, $key);
 }

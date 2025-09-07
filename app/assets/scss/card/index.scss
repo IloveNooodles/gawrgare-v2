@@ -1,6 +1,3 @@
-@import '~/assets/scss/colors';
-@import '~/assets/scss/mixins';
-
 .container {
   padding: 1rem;
   transition: 0.2s all ease;
@@ -37,14 +34,14 @@ a {
   gap: 0.4rem;
 }
 
-@include themify($themes) {
+@include mixins.themify(colors.$themes) {
   .cardTitle {
-    color: themed('text');
+    color: mixins.themed("text");
   }
 
   .container {
     &:hover {
-      background-color: themed('surface');
+      background-color: mixins.themed("surface");
     }
   }
 }

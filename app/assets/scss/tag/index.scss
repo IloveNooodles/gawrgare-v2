@@ -1,9 +1,6 @@
-@import "~/assets/scss/colors";
-@import "~/assets/scss/mixins";
-
 .tag {
   display: flex;
-  font-family: 'Inter';
+  font-family: "Inter";
   flex-wrap: wrap;
   min-width: 30px;
   max-width: fit-content;
