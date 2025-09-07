@@ -18,5 +18,13 @@ const toggleDark = useToggle(isDark);
 <style lang="css" scoped>
 div {
   cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+div:hover {
+  transform: scale(1.1);
 }
 </style>
