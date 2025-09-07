@@ -1,6 +1,6 @@
-import en from './i18n/en.json';
-import id from './i18n/id.json';
-import ja from './i18n/ja.json';
+import en from './locales/en.json';
+import id from './locales/id.json';
+import ja from './locales/ja.json';
 
 export default defineI18nConfig(() => ({
   legacy: false,

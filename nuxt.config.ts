@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   app: {
     head: {
-      title: 'mgarebaldhie.me',
+      title: 'mgarebaldhie personal website',
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
     },
@@ -26,7 +26,7 @@ export default defineNuxtConfig({
     }
   },
   i18n: {
-    baseUrl: "https://mgarebaldhie.me",
+    baseUrl: "https://www.mgarebaldhie.com",
     locales: [
       { code: 'en', language: 'en-US' },
       { code: 'ja', language: 'ja-JP' },
@@ -38,5 +38,10 @@ export default defineNuxtConfig({
       useCookie: true,
     }
   },
-  modules: ['@nuxtjs/seo', '@nuxtjs/i18n', '@nuxt/icon', '@vueuse/nuxt']
+  modules: [
+    '@nuxtjs/seo',
+    '@nuxtjs/i18n',
+    '@nuxt/icon',
+    '@vueuse/nuxt'
+  ]
 })
